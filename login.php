@@ -40,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
 <body class="bg-light">
 <div class="container mt-5" style="max-width: 420px;">
     <div class="card p-4 shadow-sm">
-        <h3 class="text-center mb-3 fw-bold text-primary">CampServe</h3>
+        <h3 class="text-center mb-3 fw-bold text-primary">Campus Miantenance</h3>
         <p class="text-center text-muted mb-4">เข้าสู่ระบบแจ้งซ่อมและยืมอุปกรณ์</p>
         
         <?php if(isset($error)): ?>
