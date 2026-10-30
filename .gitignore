@@ -6,7 +6,9 @@ desktop.ini
 # Environment / Config Files
 .env
 *.log
+config/db.php
 
 # Editor Settings
 .vscode/
 .idea/
+
