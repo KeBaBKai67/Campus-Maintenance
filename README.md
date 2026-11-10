@@ -55,3 +55,13 @@ readme_content = """#  Campus Maintenance & Equipment Lending System
    * ป้องกัน CSRF Token ในทุกฟอร์ม
    * ป้องกัน SQL Injection ด้วย Prepared Statements (`bind_param`)
    * ป้องกัน XSS ทั่วทั้งระบบด้วย Helper Function `h()` (`htmlspecialchars`)
+
+---
+
+##  บัญชีทดสอบ
+1. **Student**
+   *Name: student01
+   *Password: 1234
+2. **Admin**
+   *Name: admin01
+   *Password: 1234
