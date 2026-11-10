@@ -35,3 +35,40 @@ function check_auth_token(): void {
         exit('Invalid CSRF token');
     }
 }
+
+function send_line_message($message_text) {
+    $access_token = 'YOUR_CHANNEL_ACCESS_TOKEN_HERE'; 
+    
+    $user_id = 'YOUR_USER_ID_HERE'; 
+
+    $url = 'https://api.line.me/v2/bot/message/push';
+    
+    $data = [
+        'to' => $user_id,
+        'messages' => [
+            [
+                'type' => 'text',
+                'text' => $message_text
+            ]
+        ]
+    ];
+    
+    $post_data = json_encode($data);
+
+    $ch = curl_init($url);
+    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $post_data);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, [
+        'Content-Type: application/json',
+        'Authorization: Bearer ' . $access_token
+    ]);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+    curl_setopt($ch, CURLOPT_TIMEOUT, 5);
+
+    $result = curl_exec($ch);
+    curl_close($ch);
+
+    return $result;
+}
