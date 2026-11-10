@@ -60,8 +60,8 @@ readme_content = """#  Campus Maintenance & Equipment Lending System
 
 ##  บัญชีทดสอบ
 1. **Student**
-   *Name: student01
-   *Password: 1234
+   * Name: student01
+   * Password: 1234
 2. **Admin**
-   *Name: admin01
-   *Password: 1234
+   * Name: admin01
+   * Password: 1234
