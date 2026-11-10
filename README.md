@@ -39,37 +39,7 @@ readme_content = """#  Campus Maintenance & Equipment Lending System
 
 ---
 
-##  3. Use Case Analysis & Workflow
-
-                +--------------------------------+
-                |       Campus Maintenance       |
-                +--------------------------------+
-                                |
-        +-----------------------+-----------------------+
-        |                                               |
-+-----------------+                             +-----------------+
-|  Student / User |                             |      Admin      |
-+-----------------+                             +-----------------+
-|                                               |
-+---> [ เข้าสู่ระบบ (Login) ]                       +---> [ เข้าสู่ระบบ (Login) ]
-|                                               |
-+---> [ เลือกประเภทคำขอ ]                         +---> [ ดูรายการคำขอทั้งหมด ]
-|     - แจ้งซ่อม (Maintenance)                    |
-|     - ยืมอุปกรณ์ (Lending)                       +---> [ อัปเดตสถานะคำขอ ]
-|                                               |     (Pending -> Approved -> Completed)
-+---> [ เลือกอุปกรณ์/สถานที่ ]                       |     * Sync สถานะอุปกรณ์อัตโนมัติ
-|                                               |
-+---> [ ส่งคำขอ ]                                +---> [ เพิ่ม/ลบ รายการอุปกรณ์ ]
-|        |                                      |
-|        v                                      +---> [ รับแจ้งเตือน LINE Notify ]
-|   (ส่ง LINE Notify ไปยัง Admin)
-|
-|
-+---> [ ดูสถานะคำขอของตนเอง ]
-
----
-
-##  4. Main Features & Highlights
+##  3. Main Features & Highlights
 
 1. **Role-Based Dynamic Access Control:**
    * แยก UI/UX ระหว่าง Student และ Admin ชัดเจนในไฟล์เดียว
